@@ -10,7 +10,7 @@ var app = builder.Build();
 
 //DI 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-options.UseSqlServer());
+options.UseSqlServer(builder.Configuration.GetConnectionString("DevConnection"));
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
