@@ -43,3 +43,10 @@ body {
     color: #212b36;
     border: 1px solid #fff;
 }
+
+/*Widget*/
+.widget {
+    border-radius: 1rem;
+    background-color: #1a222b;
+    padding: 3rem;
+}
