@@ -14,8 +14,7 @@
                     <span asp-validation-for="Date" class="text-danger"></span>
                 </div>
             <div class="mb-3">
-                <label asp-for="CategoryId" class="control-label"></label>
-                <select asp-for="CategoryId" class ="form-control" asp-items="ViewBag.CategoryId"></select>
+                    <ejs-dropdownlist id="ddlCategory" ejs-for="CategoryId" dataSource="@ViewBag.Categories"> </ejs-dropdownlist>
             </div>
             <div class="mb-3">
                 <label asp-for="Amount" class="control-label"></label>
