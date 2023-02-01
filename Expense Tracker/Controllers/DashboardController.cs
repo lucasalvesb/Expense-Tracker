@@ -57,6 +57,7 @@ namespace Expense_Tracker.Controllers
                     amount = k.Sum(j => j.Amount),
                     formattedAmount = k.Sum(j => j.Amount).ToString("C0"),
                 })
+                .OrderByDescending(l=>l.amount)
                 .ToList();
 
             return View();
