@@ -1,6 +1,7 @@
 ﻿using Expense_Tracker.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Syncfusion.EJ2.Charts;
 using System.Globalization;
 
 namespace Expense_Tracker.Controllers
@@ -60,7 +61,36 @@ namespace Expense_Tracker.Controllers
                 .OrderByDescending(l=>l.amount)
                 .ToList();
 
+            //Spline Chart - Income vs Expense
+            //Income
+            List<SplineChartData> IncomeSummary = SelectedTransactions
+                .Where(i => i.Category.Type == "Income")
+                .GroupBy(j => j.Date)
+                .Select(k => new SplineChartData()
+                {
+                    day = k.First().Date.ToString("dd-MMM"),
+                    income = k.Sum(l => l.Amount)
+                })
+                .ToList();
+
+            //Expense
+            List<SplineChartData> ExpenseSummary = SelectedTransactions
+                .Where(i => i.Category.Type == "Expense")
+                .GroupBy(j => j.Date)
+                .Select(k => new SplineChartData()
+                {
+                    day = k.First().Date.ToString("dd-MMM"),
+                    expense = k.Sum(l => l.Amount)
+                })
+                .ToList();
+
             return View();
         }
+    }
+    public class SplineChartData
+    {
+        public string day;
+        public int income;
+        public int expense;
     }
 }
