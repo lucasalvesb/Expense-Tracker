@@ -24,8 +24,34 @@ body {
   color: #fff;
 }
 
+nav.navbar {
+    background-color: rgba(18, 22, 29);
+}
+
+    nav.navbar i {
+        padding: 10px;
+        border-radius: 50%;
+        font-size: 1.2rem;
+        cursor: pointer;
+    }
+
+        nav.navbar i:hover, nav.navbar img:hover {
+            cursor: pointer;
+            background-color: #48545f14;
+            transform: scale(1.05) translateZ(0px);
+        }
+
+nav.navbar {
+    margin-left: 18.125rem;
+}
+
 .e-bigger {
     font-size: x-large;
+}
+
+img.profile-pic {
+    width: 2.5rem;
+    border-radius: 50%;
 }
 
 .main-content {
