@@ -43,7 +43,7 @@ namespace Expense_Tracker.Controllers
             //Balance
 
             int Balance = TotalIncome - TotalExpense;
-            CultureInfo culture = CultureInfo.CreateSpecificCulture("en-US");
+            CultureInfo culture = CultureInfo.CreateSpecificCulture("pt-BR");
             culture.NumberFormat.CurrencyNegativePattern = 1;
             ViewBag.Balance = String.Format(culture, "{0:C0}", Balance);
 
