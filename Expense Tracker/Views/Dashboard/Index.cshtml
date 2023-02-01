@@ -79,8 +79,20 @@
             </div>
             <ejs-chart id="spline-chart" background="#1a222b">
                 <e-series-collection>
-                    <e-series></e-series>
-                    <e-series></e-series>
+                    <e-series 
+                    dataSource="@ViewBag.SplineChartData" 
+                    xName="day" 
+                    yName="income" 
+                    name="income" 
+                    type="@Syncfusion.EJ2.Charts.ChartSeriesType.Spline">
+                </e-series>
+                    <e-series 
+                    dataSource="@ViewBag.SplineChartData" 
+                    xName="day" 
+                    yName="expense" 
+                    name="expense" 
+                    type="@Syncfusion.EJ2.Charts.ChartSeriesType.Spline">
+                </e-series>
 
                 </e-series-collection>
 
