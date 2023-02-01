@@ -7,19 +7,23 @@
 	menuItems.Add(new
 	{
 		text = "Categories",
-		url = "/Category"
+		url = "/Category",
+		iconCss = "fa-solid fa-folder-closed",
 	});
 
 	menuItems.Add(new
 	{
 		text = "Transactions",
-		url = "/Transaction"
+		url = "/Transaction",
+		iconCss = "fa-solid fa-arrow-right-arrow-left",
 	});
 }
 
 
 <ejs-sidebar id="sidebar" width="18rem" closeOnDocumentClick="false">
 	<e-content-template> 
-		<ejs-menu id="menu" items="menuItems"></ejs-menu>
+		<ejs-menu id="menu" 
+		items="menuItems"
+		orientation="Vertical"></ejs-menu>
 	</e-content-template>
 </ejs-sidebar>
