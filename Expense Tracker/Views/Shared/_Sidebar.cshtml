@@ -6,6 +6,12 @@
 
 	menuItems.Add(new
 	{
+		text = "General",
+		separator = true,
+	});
+
+	menuItems.Add(new
+	{
 		text = "Dashboard",
 		url = "/",
 		iconCss = "fa-solid fa-box",
@@ -27,6 +33,12 @@
 
 	menuItems.Add(new
 	{
+		text = "Extras",
+		separator=true,
+	});
+
+	menuItems.Add(new
+	{
 		text = "Reports",
 		url = "#",
 		iconCss = "fa-solid fa-chart-simple",
@@ -41,7 +53,7 @@
 }
 
 
-<ejs-sidebar id="sidebar" width="13.75rem">
+<ejs-sidebar id="sidebar" width="13rem">
 	<e-content-template> 
 		<ejs-menu id="menu" 
 		items="menuItems"
