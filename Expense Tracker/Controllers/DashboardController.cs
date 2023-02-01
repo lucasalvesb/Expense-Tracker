@@ -33,10 +33,15 @@ namespace Expense_Tracker.Controllers
             //Total Expense
 
             int TotalExpense = SelectedTransactions
-                .Where(i => i.Category.Type == "Income")
+                .Where(i => i.Category.Type == "Expense")
                 .Sum(j => j.Amount);
 
-            ViewBag.TotalIncome = TotalIncome.ToString("C0");
+            ViewBag.TotalExpense = TotalExpense.ToString("C0");
+
+            //Balance
+
+            int Balance = TotalIncome - TotalExpense;
+            ViewBag.Balance = Balance.ToString("C0");
 
 
             return View();
