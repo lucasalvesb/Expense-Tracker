@@ -45,6 +45,8 @@ nav.navbar {
     margin-left: 18.125rem;
 }
 
+
+
 .e-bigger {
     font-size: x-large;
 }
@@ -53,6 +55,21 @@ img.profile-pic {
     width: 2.5rem;
     border-radius: 50%;
 }
+
+.profile-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba(72, 84, 95, 0.12);
+    padding: 16px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+    .profile-wrapper .titles {
+        line-height: 1;
+    }
 
 .main-content {
     margin-left: 18rem;
@@ -70,6 +87,17 @@ img.profile-pic {
     box-shadow: none;
 }
 
+/*Logo*/
+.logo-wrapper {
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.app-logo {
+    padding: 10px 10px;
+}
 
 /*Hyperlink*/
 
@@ -278,3 +306,5 @@ img.profile-pic {
     .widget.chart {
         padding: 5px;
     }
+
+
