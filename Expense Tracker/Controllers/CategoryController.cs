@@ -79,3 +79,61 @@ namespace Expense_Tracker.Controllers
         
     }
 }
+
+
+//// POST: Category/Delete/5
+//[HttpPost, ActionName("Delete")]
+//[ValidateAntiForgeryToken]
+//public async Task<IActionResult> DeleteConfirmed(int id)
+//{
+//    if (_context.Categories == null)
+//    {
+//        return Problem("Entity set 'ApplicationDbContext.Categories'  is null.");
+//    }
+//    var category = await _context.Categories.FindAsync(id);
+//    if (category != null)
+//    {
+//        _context.Categories.Remove(category);
+//    }
+
+//    await _context.SaveChangesAsync();
+//    return RedirectToAction(nameof(Index));
+//}
+
+//// POST: Category/Delete/5
+//[HttpPost, ActionName("Delete")]
+//[ValidateAntiForgeryToken]
+//public async Task<IActionResult> DeleteConfirmed(int id)
+//{
+//    if (_context.Categories == null)
+//    {
+//        return Problem("Entity set 'ApplicationDbContext.Categories'  is null.");
+//    }
+//    var category = await _context.Categories.FindAsync(id);
+//    if (category != null)
+//    {
+//        _context.Categories.Remove(category);
+//    }
+
+//    await _context.SaveChangesAsync();
+//    return RedirectToAction(nameof(Index));
+//}
+
+//// POST: Category/Delete/5
+//[HttpPost, ActionName("Delete")]
+//[ValidateAntiForgeryToken]
+//public async Task<IActionResult> DeleteConfirmed(int id)
+//{
+//    if (_context.Categories == null)
+//    {
+//        return Problem("Entity set 'ApplicationDbContext.Categories'  is null.");
+//    }
+//    var category = await _context.Categories.FindAsync(id);
+//    if (category != null)
+//    {
+//        _context.Categories.Remove(category);
+//    }
+
+//    await _context.SaveChangesAsync();
+//    return RedirectToAction(nameof(Index));
+//} 
