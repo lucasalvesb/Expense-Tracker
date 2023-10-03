@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Expense_Tracker.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Expense_Tracker.Controllers
 {
@@ -19,6 +20,8 @@ namespace Expense_Tracker.Controllers
         }
 
         // GET: Category
+        [Authorize]
+        [HttpGet]
         public async Task<IActionResult> Index()
         {
               return View(await _context.Categories.ToListAsync());
@@ -26,6 +29,8 @@ namespace Expense_Tracker.Controllers
 
 
         // GET: Category/AddOrEdit
+        [Authorize]
+        [HttpGet]
         public IActionResult AddOrEdit(int id=0)
         {
             if(id==0)
